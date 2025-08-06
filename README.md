@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Make My Events 📅
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack MERN application designed to be a comprehensive directory for event management companies, allowing users to browse, search, and connect with organizers. This platform also empowers event organizers to list and manage their own company profiles.
 
-## Available Scripts
+**Live Demo:** [Link to your deployed application (e.g., on Vercel/Netlify)]
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make My Events is a dynamic web platform built to bridge the gap between people planning events and the professionals who can bring them to life. In a crowded market, finding the right event planner can be challenging. This application provides a centralized, easy-to-navigate directory where users can filter companies by category and search for specific services.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For event management professionals, it offers a user-friendly interface to create, update, and manage their business listings, giving them visibility to a targeted audience. The entire application is built with a secure authentication system, ensuring that user data and listings are protected.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Key Features
 
-### `npm run build`
+* **Dynamic Search & Filtering:** Users can search for event companies by name and filter them by categories like "Wedding," "Corporate," or "Birthday."
+* **Secure User Authentication:** Complete user registration and login system using JWT (JSON Web Tokens) for secure, session-based authentication. Passwords are encrypted using `bcrypt.js`.
+* **User-Managed Listings (CRUD):** Authenticated users can Create, Read, Update, and Delete their own company listings through a dedicated "My Listings" dashboard.
+* **Protected Routes:** Users must be logged in to contact organizers or manage listings, ensuring secure interactions.
+* **Interactive UI:** A responsive and modern user interface built with React, featuring professional loading states, a dynamic navbar, and toast notifications for user feedback.
+* **RESTful API:** A robust backend built with Node.js and Express, providing a well-structured API for all frontend operations.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is built with the MERN stack and other modern web technologies:
 
-### `npm run eject`
+### Frontend
+* **React.js**: A JavaScript library for building user interfaces.
+* **React Router**: For declarative routing in the application.
+* **React Context API**: For robust, global state management of user authentication.
+* **MDB UI Kit**: For styling and responsive components.
+* **React Hot Toast**: For clean, professional user notifications.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend
+* **Node.js**: A JavaScript runtime for the server.
+* **Express.js**: A web framework for Node.js to build the RESTful API.
+* **MongoDB Atlas**: A cloud-hosted NoSQL database.
+* **Mongoose**: An ODM library for MongoDB to model application data.
+* **JSON Web Tokens (JWT)**: For creating secure authentication tokens.
+* **bcrypt.js**: For hashing and securing user passwords.
+* **dotenv**: For managing environment variables.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 How to Run the Project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get a local copy up and running, follow these simple steps.
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Node.js and npm (or yarn) installed on your machine.
+* A MongoDB Atlas account and a connection string.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation & Setup
 
-### Code Splitting
+1.  **Clone the repository**
+    ```sh
+    git clone [https://github.com/your_username/MakeMyEvents.git](https://github.com/your_username/MakeMyEvents.git)
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2.  **Backend Setup**
+    ```sh
+    # 1. Navigate to the backend folder
+    cd MakeMyEvents/Backend
 
-### Analyzing the Bundle Size
+    # 2. Install NPM packages
+    npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    # 3. Create a .env file in the Backend folder and add your variables
+    #    (This is crucial for security)
+    MONGO_URI="your_mongodb_connection_string"
+    JWT_SECRET="your_super_secret_key_for_signing_tokens"
+    ```
 
-### Making a Progressive Web App
+3.  **Frontend Setup**
+    ```sh
+    # 1. Navigate to the root folder from the Backend folder
+    cd ..
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    # 2. Install NPM packages for the React app
+    npm install
+    ```
 
-### Advanced Configuration
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You will need two separate terminals to run both the frontend and backend servers concurrently.
 
-### Deployment
+* **Terminal 1: Start the Backend Server**
+    ```sh
+    # Navigate to the Backend folder
+    cd Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    # Start the server (usually with nodemon for development)
+    npm start
+    ```
+    The backend will be running on `http://localhost:5000`.
 
-### `npm run build` fails to minify
+* **Terminal 2: Start the Frontend Server**
+    ```sh
+    # Navigate to the root project folder
+    cd MakeMyEvents
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    # Start the React app
+    npm start
+    ```
+    The application will open and be available at `http://localhost:3000`.
+
+---
+
+## 👤 Contact
+
+Bhuvan CV - [bhuvancv](https://github.com/bhuvancv)
+
+Project Link: [https://github.com/bhuvancv/MakeMyEvents](https://github.com/bhuvancv/MakeMyEvents)
