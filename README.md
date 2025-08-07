@@ -2,7 +2,6 @@
 
 A full-stack MERN application designed to be a comprehensive directory for event management companies, allowing users to browse, search, and connect with organizers. This platform also empowers event organizers to list and manage their own company profiles.
 
-**Live Demo:** [Link to your deployed application (e.g., on Vercel/Netlify)]
 
 ---
 
