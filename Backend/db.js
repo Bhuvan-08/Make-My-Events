@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://bhuvan:Bhuvan%40123@makemyevents.0k0r9.mongodb.net/MakeMyEvents?retryWrites=true&w=majority&appName=MakeMyEvents';
+const mongoURI = 'replace thihs with your mongodb uri';
 
 const mongoDB = async () => {
     try {
